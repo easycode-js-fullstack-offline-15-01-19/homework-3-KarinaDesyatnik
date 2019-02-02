@@ -47,7 +47,7 @@ for (let i = 0; i < string2.length; i++) {
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 for (let number of arr) {
-  if (number % 2 != 0) {
+  if (number % 2) {
    console.log(number);
   } 
 }
@@ -66,8 +66,9 @@ let list = {
     age: 29
 }
 for (let key in list) {
-if (list[key].length) {
-   console.log(list[key].toUpperCase());
+if (typeof list[key] === 'string') 
+{
+   list[key] = list[key].toUpperCase();
 }
 }
 
